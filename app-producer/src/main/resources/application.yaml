@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  rabbitmq:
+    host: 10.10.10.92
+    port: 5672
+    password: admin
+    username: root123
+    queues:
+      default:
+        name: spring-boot-queue
+        routing-key: spring-boot-routing-key
+        exchange: spring-boot-exchange
+        durable: false
+      notification:
+        name: notificationQueue
+        routing-key: notificationRoutingKey
+        exchange: notificationExchange
+        durable: false
+      finance:
+        name: financeQueue
+        routing-key: financeRoutingKey
+        exchange: financeExchange
+        durable: false
+      log:
+        name: logQueue
+        routing-key: logRoutingKey
+        exchange: logExchange
+        durable: false # true if we are declaring a durable queue (the queue will survive a server restart)
+
+#        autoDelete: false
+#        exclusive: false
+#        arguments:
+#          x-message-ttl: 60000
+#          x-dead-letter-exchange: payment-dead-letter-exchange
+#          x-dead-letter-routing-key: payment-dead-letter-routing-key
