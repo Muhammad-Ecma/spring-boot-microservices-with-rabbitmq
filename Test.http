@@ -3,7 +3,7 @@ POST http://localhost:8080/api/rabbitmq/direct-exchange
 Content-Type: application/json
 
 {
-  "paymentId": 54,
+  "paymentId": 55,
   "paymentType": "fake_data",
   "paymentStatus": "fake_data",
   "paymentAmount": 8.65,

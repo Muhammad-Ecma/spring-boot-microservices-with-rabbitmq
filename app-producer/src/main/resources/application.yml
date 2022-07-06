@@ -12,18 +12,3 @@ spring:
                 exchange: spring-boot-exchange
                 name: spring-boot-queue
                 routing-key: spring-boot-routing-key
-            finance:
-                durable: false
-                exchange: financeExchange
-                name: financeQueue
-                routing-key: financeRoutingKey
-            log:
-                durable: false
-                exchange: logExchange
-                name: logQueue
-                routing-key: logRoutingKey
-            notification:
-                durable: false
-                exchange: notificationExchange
-                name: notificationQueue
-                routing-key: notificationRoutingKey
