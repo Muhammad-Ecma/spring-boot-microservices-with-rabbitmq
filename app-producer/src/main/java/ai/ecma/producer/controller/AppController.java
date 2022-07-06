@@ -4,10 +4,7 @@ import ai.ecma.producer.model.Payment;
 import ai.ecma.producer.service.RabbitMQSender;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * This class not documented :(
@@ -28,7 +25,7 @@ public class AppController {
      * @param payment - the message to be queued
      * @return response message
      */
-    @GetMapping(value = "/direct-exchange")
+    @PostMapping(value = "/direct-exchange")
     public String directExchange(@RequestBody Payment payment) {
         rabbitMQSender.send(payment);
         return "Message sent to the RabbitMQ Successfully";
