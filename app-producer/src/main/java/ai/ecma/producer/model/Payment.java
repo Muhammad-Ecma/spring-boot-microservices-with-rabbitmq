@@ -1,5 +1,7 @@
 package ai.ecma.producer.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,5 +25,4 @@ public class Payment implements Serializable {
     private String paymentStatus;
     private Double paymentAmount;
     private String paymentCurrency;
-    private LocalDateTime paymentCreatedAt;
 }

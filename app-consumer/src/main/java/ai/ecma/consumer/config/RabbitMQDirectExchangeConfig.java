@@ -1,4 +1,4 @@
-package ai.ecma.producer.config;
+package ai.ecma.consumer.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @author Muhammad Mo'minov
  * @since 7/5/2022
  */
-@Configuration
+//@Configuration
 public class RabbitMQDirectExchangeConfig {
     /*
 
