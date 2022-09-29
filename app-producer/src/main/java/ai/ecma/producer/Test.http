@@ -1,0 +1,10 @@
+POST http://localhost:8080/api/rabbitmq/direct-exchange
+Content-Type: application/json
+
+{
+  "paymentId": 12,
+  "paymentType": "test_9bcb29063ed3",
+  "paymentStatus": "test_6606e2a1f511",
+  "paymentAmount": 99.23,
+  "paymentCurrency": "test_66ede5977455"
+}
